@@ -54,7 +54,7 @@ override-redirect = true
 inherit = bar/base
 monitor = ${env:MONITOR:HDMI-A-3}
 modules-left = powermenu
-modules-right = spotify ip wired-network pulseaudio-control date
+modules-right = spotify ip wired-network pulseaudio-control date battery
 
 offset-x = 0.5%
 width = 99%
@@ -336,5 +336,14 @@ label-muted-padding = 0
 
 click-right = pavucontrol &
 click-middle = pulseeffects &
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = AC0
+format-charging-background = ${colors.background}
+format-charging-padding = 3
+format-discharging-background = ${colors.background}
+format-discharging-padding = 3
 
 ; vim:ft=dosini
